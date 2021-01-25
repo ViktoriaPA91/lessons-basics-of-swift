@@ -10,8 +10,12 @@ import UIKit
 // 6. Вывести значения свойств экземпляров в консоль.
 
 
-enum CarBrand {
-    case Hyundai, Mazda, Geely, Mersedes, Volvo
+enum CarBrand: String, CustomStringConvertible {
+    case Hyundai, Mazda, Geely, Mersedes, Volvo;
+    
+    var description: String {
+        return rawValue
+    }
 }
 
 enum CarAction {
